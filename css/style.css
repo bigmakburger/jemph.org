@@ -1,0 +1,294 @@
+/* Reset some default styles */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+.bodydesign {
+    font-family: 'CMG Sans';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+ 
+    color: #fff;
+}
+#navbarNav{
+    font-family: 'Lato', sans-serif;
+    font-size: large;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.navbar {
+    background: #1b1b1bfa;
+}
+.navbar-brand img {
+    max-width: 70px; /* Adjust the size of the logo */
+}
+
+.jemlogo {
+    filter: drop-shadow(4px 5px 5px rgba(0, 0, 0, 0.795));
+}
+
+/* Footer Section */
+footer {
+    background: linear-gradient(to right, #333, #222); /* Dark gradient background */
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    color: #fff; /* White text color */
+}
+
+.footer-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #444; /* Slightly darker background */
+}
+
+.footer-content a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff; /* White text color */
+}
+
+.footer-content a:hover {
+    color: #007bff;
+}
+
+
+/* IMAGE SLIDER STYLES */
+.imgbg {
+    background-color: #3d3d3d;
+    display: flex;
+    justify-content: center;
+    margin-top: 0vh;
+}
+
+.slider-frame {
+    overflow: hidden;
+    height: 500px;
+    width: 1200px;
+    border: 5px outset rgba(255, 255, 255, 0.514);
+    border-radius: 10px;
+}
+
+@keyframes slide_animation {
+    0% {left:0px;}
+	10% {left:0px;}
+	20% {left:1200px;}
+	30% {left:1200px;}
+	40% {left: 2400px;}
+	50% {left: 2400px;}
+	60% {left: 1200px;}
+	70% {left: 1200px;}
+	80% {left: 0px;}
+	90% {left: 0px;}
+	100% {left:0px;}
+}
+
+.slide-images {
+    width: 3740px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.img-container {
+    height: 800px;
+	width: 1200px;
+	position: relative;
+	float: left;
+}
+
+/*Navbar Animation*/
+.navbar-nav li {
+    transition: transform 0.3s ease; 
+}
+
+.navbar-nav li:hover {
+    transform: translateY(-3px); /* Move the item up slightly on hover */
+}
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+.navbar-toggler-icon:focus {
+    outline: none;
+}
+.navbar-toggler-icon:focus-visible {
+    outline: none;
+}
+.navbar-toggler:focus {
+    outline: none;
+}
+
+/*FlexBox*/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    height: 300px;  
+}
+
+.flex-item {
+    flex: 1;
+    border: 1px solid #ccc;
+}
+
+.scroll-up-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-up-button i {
+    line-height: 40px;
+}
+
+.intro_head {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em; /* Adjust as needed */
+    font-weight: bold;
+    text-align: center;
+    margin: 3% 0;
+    color: #222;
+    padding: 20px;
+}
+
+.intro_content {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em; /* Adjust as needed */
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 800px; /* Adjust the maximum width */
+    margin: auto;
+    padding: 25px;
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Add rounded corners */
+    background-color: #444; /* Add a light background color */
+    color: #fff;
+}
+
+.button-style {
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-style:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+
+/*Contact Us*/
+.contactbody {
+    text-align: center;
+    margin: auto; /* Center the content horizontally */
+    max-width: 800px; /* Set a maximum width for the form */
+    padding: 20px;
+    background-color: #444; /* Slightly darker background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Add a subtle shadow with inverted color */
+}
+
+.contactbody h1 {
+    color: #fff; /* White text color */
+    margin-bottom: 20px;
+}
+
+.contactbody label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff; /* White text color */
+}
+
+.contactbody input, .contactbody textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #555; /* Darker input background color */
+    color: #fff; /* White text color */
+}
+
+.contactbody textarea {
+    height: 160px; /* Adjust the height of the textarea */
+}
+
+.contactbody input[type="submit"] {
+    background-color: #1aa0c9; /* White background color for the submit button */
+    color: #ffffff; /* Dark text color */
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Add transition effect on hover */
+}
+
+.contactbody input[type="submit"]:hover {
+    background-color: #ccc; /* Slightly darker button color on hover */
+    color: #333; /* Dark text color */
+}
+
+#confirmationMessage {
+    color: #4caf50; /* Green color for success message */
+    font-weight: bold;
+}
+
+/*Animated Scrolling*/
+#animatedSection {
+    height: 100vh;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px);
+    transition: all 1s;
+}
+
+.content.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.aboutContent{
+    padding: 25px;
+    color: black;
+}
