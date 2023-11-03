@@ -155,6 +155,11 @@ header ul.nav li:last-child {
 		display: none;
 	}
 }
+@media (max-width:707px){
+	.ministries-text{
+		font-size:35px;
+	}
+}
 /*banner area*/
 
 section {
