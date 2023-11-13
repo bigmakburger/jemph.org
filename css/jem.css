@@ -156,8 +156,12 @@ header ul.nav li:last-child {
 	}
 }
 @media (max-width:707px){
+	.nav li a{
+		font-size: 13px;
+	}
+@media (max-width:707px){
 	.ministries-text{
-		font-size:35px;
+		font-size:25px;
 	}
 }
 /*banner area*/
