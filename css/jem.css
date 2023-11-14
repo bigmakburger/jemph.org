@@ -33,10 +33,10 @@ a {
 }
 .ministries-text {
 	margin-left: 10px;
-	color: #ffffff;
+	color: rgb(189, 199, 53);
 	font-family: 'Great Vibes', cursive;
 	font-size: 40px;
-	-webkit-text-stroke-color: yellow;
+	-webkit-text-stroke-color: rgb(241, 155, 26);
 	-webkit-text-stroke-width: .5px;
 }
 
@@ -126,12 +126,12 @@ header ul.nav li:last-child {
 }
 
 .nav a:hover {
-    color: #e74c3c; /* Change this color to the desired hover text color */
+    color: #d1940f; 
 }
 
 .nav a:hover::before,
 .nav a:hover::after {
-    transform: scaleX(1);
+   
     background-color: #e74c3c; /* Change this color to the desired hover transition color */
 }
 
@@ -141,7 +141,7 @@ header ul.nav li:last-child {
 		padding: 20px 50px;
 	}
 }
-@media (max-width:700px) {
+@media (max-width:900px) {
 	header {
 		flex-direction: column;
 	}
@@ -154,16 +154,20 @@ header ul.nav li:last-child {
 	.about-right p {
 		display: none;
 	}
+	
 }
 @media (max-width:707px){
-	.nav li a{
-		font-size: 13px;
+	.ministries-text{
+		font-size: 25px;
 	}
-@media (max-width:707px){
+}
+@media (min-width:903px){
 	.ministries-text{
 		font-size:25px;
 	}
+
 }
+
 /*banner area*/
 
 section {
@@ -236,10 +240,27 @@ section p {
 	font-weight: 100;
 	text-transform: uppercase;
 }
-.banner-area a.banner-btn {
-	padding: 15px 35px;
-	background: #e74c3c;
-	text-transform: uppercase;
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.join-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #bf0a30;
 }
 @media (max-width:800px) {
 	.banner-area {
@@ -250,9 +271,6 @@ section p {
 	}
 	.banner-area h3 {
 		font-size: 20px;
-	}
-	.banner-area a.banner-btn {
-		padding: 8px 20px;
 	}
 }
 .back-video{
@@ -273,7 +291,113 @@ section p {
 		height: 100%;
 	}
 }
+/*description area start*/
+ul.description-content {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: auto;
+}
+.description-content li {
+	padding: 20px;
+	height: 500px;
+	max-width: 100%;
+	background-clip: border-box;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+.description-left {
+	flex-basis: 70%;
+}
+.description-right {
+	flex-basis: 30%;
+	background-image: url(../images/Gallery/2.JPG);
+	border: solid 2px black;
+}
+.description-left h2 {
+	font-size: 20px;
+	margin-right: 16vh;
+	text-align: justify;
+}
+.description-area p {
+	max-width: 800px;
+	margin-bottom: 35px;
+	line-height: 1.5;
+	text-align: left;
+	padding-left: 0;	
+}
+.section-title-desc {
+	text-transform: uppercase;
+	font-size: 50px;
+	margin-bottom: 5%;
+}
+.section-title-desc span {
+	color: #1c0abf;
+}
+.description-left h2 {
+	margin-bottom: 3%;	
+}
+.description-left p{
+	text-align: center;
+}
+.description-content p {
+    font-size: 14px; /* Adjust font size */
+    text-align: center; /* Center text */
+}
+h2 span{
+	color: rgb(228, 135, 74);
+}
 
+@media (max-width: 625px) {
+	.description-content li h2{
+	  
+	  font-size: 15px;
+	  text-align: justify; /* Center content on smaller screens */
+	  margin-bottom: 10px; /* Add some spacing between the items */
+	}
+	.description-content li p{
+		font-size: 13px;
+	}
+  
+	.description-left img {
+	  max-width: 100%; /* Make image responsive within its container */
+	}
+  
+	.description-left h2 {
+	  margin-right: 0; /* Remove the right margin */
+	}
+  }
+
+@media (max-width: 1000px) {
+	.description-content li {
+	  width: 100%; /* Set to 100% for full width on smaller screens */
+	  text-align: center; /* Center content on smaller screens */
+	  margin-bottom: 30px; /* Add some spacing between the items */
+	}
+  
+	.description-left img {
+	  max-width: 100%; /* Make image responsive within its container */
+	}
+  
+	.description-left h2 {
+	  margin-right: 0; /* Remove the right margin */
+	}
+  }
+  
+ 
+  @media (max-width: 600px) {
+	.description-content li {
+	  margin-bottom: 20px; 
+	}
+  }
+ 
+/*description area end*/
 
 /*about area*/
 .about-area{
@@ -293,7 +417,8 @@ ul.about-content {
 .about-content li {
 	padding: 20px;
 	height: 500px;
-	background-clip: content-box;
+	max-width:100%;
+	background-clip: border-box;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center;
@@ -307,15 +432,16 @@ ul.about-content {
 	flex-basis: 70%;
 }
 .about-right h2 {
-	font-size: 35px;
-	margin-left: 25vh;
+	font-size: 20px; /* Adjust font size */
+    margin-left: 0; /* Remove margin */
 }
 .about-area p {
 	max-width: 800px;
 	margin-bottom: 35px;
 	line-height: 1.5;
-	text-align: left;
 	padding-left: 0;
+	font-size: 14px; /* Adjust font size */
+    text-align: center; /* Center text */
 }
 .section-title {
 	text-transform: uppercase;
@@ -330,13 +456,6 @@ ul.about-content {
 }
 .about-right p{
 	text-align: center;
-}
-.about-btn {
-	padding: 15px 35px;
-	background: #bf0a30;
-	border-radius: 50px;
-	text-transform: uppercase;
-	color: #fff;
 }
 @media (max-width: 1000px) {
 	.section-title {
@@ -449,8 +568,8 @@ ul.contact-content {
     color: #43cbf5;
     width: 40px;
     height: 40px;
-    border-radius: 30%;
-    font-size: 24px;
+    border-radius: 50%;
+    font-size: 20px;
     text-align: center;
     cursor: pointer;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -462,7 +581,7 @@ ul.contact-content {
 
 /*Google Map*/
 .gmap{
-	margin-top: 20vh;
+	margin-top: 10vh;
 	border: solid 2px green;
 }
 
@@ -479,5 +598,65 @@ footer {
 	text-align: center;
 	color: #fff;
 	background-color: #000;
-	padding: 60px 0;
+	padding: 40px 10px;
+}
+
+@media (min-width: 466px) {
+	.nav li a{
+		font-size: 13px;
+	}
+}
+@media (min-width: 640px){
+	.nav li a{
+		font-size: 18px;
+	}
+}
+@media (min-width:768px){
+	.nav li a{
+		font-size: 18px;
+	}
+	.ministries-text{
+		font-size: 30px;
+	}
+	.logo{
+		width: 60px;
+		height: 60px;
+		margin: auto;
+	}
+}
+@media (min-width: 1024px){
+	.nav li a{
+		font-size: 18px;
+	}
+	.ministries-text{
+		font-size: 30px;
+	}
+	.logo{
+		width: 75px;
+		height: 75px;
+	}
+}
+@media (min-width :1280px){
+	.nav li a{
+		font-size: 21px;
+	}
+	.ministries-text{
+		font-size: 38px;
+	}
+	.logo{
+		width: 75px;
+		height: 75px;
+	}
+}
+@media (min-width :1536px){
+	.nav li a{
+		font-size: 22px;
+	}
+	.ministries-text{
+		font-size: 45px;
+	}
+	.logo{
+		width: 75px;
+		height: 75px;
+	}
 }
