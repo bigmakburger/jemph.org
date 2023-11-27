@@ -1,6 +1,7 @@
 /*Fonts Start*/
   @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-/*Fonts End*/
+  @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+  /*Fonts End*/
 
 * {
 	margin: 0;
@@ -33,11 +34,10 @@ a {
 }
 .ministries-text {
 	margin-left: 10px;
-	color: rgb(189, 199, 53);
-	font-family: 'Great Vibes', cursive;
+	color: rgb(245, 234, 82);
+	font-family: 'Luckiest Guy', cursive;
 	font-size: 40px;
-	-webkit-text-stroke-color: rgb(241, 155, 26);
-	-webkit-text-stroke-width: .5px;
+	
 }
 
 header {
@@ -92,6 +92,7 @@ header ul.nav li:last-child {
 }
 
 .nav a {
+	font-family: 'Luckiest Guy', cursive;
     color: #ffffff; /* Initial text color */
     text-decoration: none;
     padding: 10px 15px;
@@ -236,9 +237,10 @@ section p {
 	color: #e74c3c;
 }
 .banner-area h3 {
-	font-size: 25px;
-	font-weight: 100;
+	font-size: 30px;
+	font-weight: 400;
 	text-transform: uppercase;
+	color: rgb(255, 187, 0);
 }
 
 .button-container {
@@ -330,7 +332,8 @@ ul.description-content {
 	margin-bottom: 35px;
 	line-height: 1.5;
 	text-align: left;
-	padding-left: 0;	
+	padding-left: 0;
+
 }
 .section-title-desc {
 	text-transform: uppercase;
@@ -344,20 +347,20 @@ ul.description-content {
 	margin-bottom: 3%;	
 }
 .description-left p{
-	text-align: center;
+	text-align: justify;
 }
 .description-content p {
     font-size: 14px; /* Adjust font size */
-    text-align: center; /* Center text */
+    text-align: justify; /* Center text */
 }
 h2 span{
 	color: rgb(228, 135, 74);
 }
 
-@media (max-width: 625px) {
+@media (max-width: 821px) {
 	.description-content li h2{
 	  
-	  font-size: 15px;
+	  font-size: 14px;
 	  text-align: justify; /* Center content on smaller screens */
 	  margin-bottom: 10px; /* Add some spacing between the items */
 	}
@@ -389,19 +392,23 @@ h2 span{
 	  margin-right: 0; /* Remove the right margin */
 	}
   }
+ @media(min-width:1001px){
+	.description-left p{
+		text-align: justify;
+		margin-right: 100px;
+	}
+ } 
   
  
-  @media (max-width: 600px) {
-	.description-content li {
-	  margin-bottom: 20px; 
-	}
-  }
- 
+
 /*description area end*/
 
-/*about area*/
+/*Church News*/
 .about-area{
 	background-color: #43cbf53f;
+}
+.about-area h2{
+	color: rgb(165, 68, 33);
 }
 
 ul.about-content {
@@ -601,10 +608,37 @@ footer {
 	padding: 40px 10px;
 }
 
-@media (min-width: 466px) {
+
+/*Website Responsiveness Elements*/
+@media (min-width: 420px) {
 	.nav li a{
-		font-size: 13px;
+		font-size: 15px;
+		padding: 0;
 	}
+	.about-right p {
+        display: block;
+        font-size: 14px; /* adjust the font size */
+        text-align: left; /* Align the text as needed */
+    }
+	.ministries-text{
+		font-size: 25px;
+		text-align: center;
+	}
+	.logo{
+		width: 60px;
+		height: 50px;
+	}
+	.logo-link{
+		margin-right: 25px;
+	}
+
+	/*Desc start*/
+	.descspan{
+		font-size: 14px;
+		font-weight: 400;
+	}
+	/*Desc end*/
+	
 }
 @media (min-width: 640px){
 	.nav li a{
@@ -629,12 +663,18 @@ footer {
 		font-size: 18px;
 	}
 	.ministries-text{
-		font-size: 30px;
+		font-size: 28px;
+		text-align: left;
 	}
 	.logo{
 		width: 75px;
 		height: 75px;
 	}
+	.about-right p {
+        display: block;
+        font-size: 17px; /* adjust the font size */
+        text-align: left; /* Align the text as needed */
+    }
 }
 @media (min-width :1280px){
 	.nav li a{
@@ -642,10 +682,15 @@ footer {
 	}
 	.ministries-text{
 		font-size: 38px;
+		text-align: left;
+		font-size: 30px;
 	}
 	.logo{
-		width: 75px;
-		height: 75px;
+		width: 85px;
+		height: 80px;
+	}
+	.descspan{
+		font-size: 20px;
 	}
 }
 @media (min-width :1536px){
@@ -656,7 +701,7 @@ footer {
 		font-size: 45px;
 	}
 	.logo{
-		width: 75px;
-		height: 75px;
+		width: 85px;
+		height: 80px;
 	}
 }
